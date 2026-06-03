@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Happy Birthday, Cayaang!",
+  title: "Untuk Wanita yang Aku Sayang",
   description: "Hitung mundur kecil untuk hari yang ditunggu.",
 };
 

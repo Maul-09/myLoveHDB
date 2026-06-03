@@ -3,16 +3,10 @@
 import { useEffect, useMemo, useState } from "react";
 
 const TARGET_DATE = new Date("2026-07-09T00:00:00+07:00").getTime();
-const BANNER_FLAGS = Array.from({ length: 9 }, (_, index) => index);
 const DECORATIONS = [
   "heart heart-one",
   "heart heart-two",
-  "heart heart-three",
   "spark spark-one",
-  "spark spark-two",
-  "spark spark-three",
-  "gift gift-one",
-  "gift gift-two",
 ];
 
 function getTimeLeft() {
@@ -58,12 +52,6 @@ export default function Home() {
 
   return (
     <main className="countdown-page">
-      <div className="party-banner" aria-hidden="true">
-        {BANNER_FLAGS.map((flag) => (
-          <span className="banner-flag" key={flag} />
-        ))}
-      </div>
-
       <div className="decor-layer" aria-hidden="true">
         {DECORATIONS.map((className) => (
           <span className={className} key={className} />
@@ -73,20 +61,19 @@ export default function Home() {
       <section className="countdown-content" aria-live="polite">
         <p className="eyebrow">
           <span className="mini-heart" aria-hidden="true" />
-          Untuk kamu, cayaang
+          Hai, sayang
           <span className="mini-spark" aria-hidden="true" />
         </p>
-        <h1>Sebentar Lagi Hari Kamu</h1>
+        <h1>Tinggal Nunggu Hari Kamu</h1>
         <p className="subtitle">
           {timeLeft.isDone
-            ? "Akhirnya sampai juga. Hari ini tentang kamu, dan aku sudah nunggu momen ini dari lama."
-            : "Aku lagi nyiapin sesuatu yang kecil-kecil kepikiran terus. Sampai 9 Juli nanti, biar waktu yang jagain rahasianya dulu."}
+            ? "Akhirnya sampai juga. Hari ini aku cuma mau kamu ngerasa paling disayang."
+            : "Aku nggak mau ngasih banyak bocorin dulu. Yang jelas, ada sesuatu yang lagi aku siapin buat kamu cayaang :)."}
         </p>
 
         <div className="countdown-grid">
           {units.map((unit) => (
             <div className={`countdown-unit ${unit.tone}`} key={unit.label}>
-              <span className="unit-bow" aria-hidden="true" />
               <span className="countdown-number">
                 {mounted ? formatUnit(unit.value) : "--"}
               </span>
@@ -97,11 +84,10 @@ export default function Home() {
 
         <div className="target-row">
           <span>9 Juli 2026</span>
-          <span>Hari yang aku tunggu</span>
+          <span>Hari yang kamu tunggu</span>
         </div>
         <p className="sweet-note">
-          Nanti kalau waktunya tiba, semoga kamu senyum lama banget... karena semuanya memang aku siapin buat kamu.
-        </p>
+          Aku cuma pengen pas hari itu tiba bakalan jadi salah satu momen kecil yang kamu inget sambil senyum xixi. ~ Brokoli Kecayangan Kamu</p>
       </section>
     </main>
   );

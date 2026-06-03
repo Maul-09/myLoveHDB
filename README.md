@@ -14,3 +14,12 @@ Buka `http://localhost:3000`.
 ## Deploy ke Vercel
 
 Push folder ini ke repository Git, lalu import repository ke Vercel. Tidak ada backend atau API route di project ini.
+
+Rekomendasi setting Vercel:
+
+- Framework Preset: `Next.js`
+- Install Command: `npm install`
+- Build Command: `npm run build`
+- Output Directory: biarkan kosong/default
+
+Setelah repository terhubung, setiap push ke branch `main` akan membuat deployment baru.
