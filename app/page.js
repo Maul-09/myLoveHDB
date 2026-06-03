@@ -69,6 +69,10 @@ export default function Home() {
       </div>
 
       <section className="countdown-content" aria-live="polite">
+        <div className="letter-spotlight" aria-hidden="true">
+          <span className="love-letter" />
+        </div>
+
         <p className="eyebrow">
           <span className="mini-heart" aria-hidden="true" />
           Hai, sayang
