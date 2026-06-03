@@ -49,6 +49,16 @@ export default function Home() {
     ],
     [timeLeft],
   );
+  const subtitleLines = timeLeft.isDone
+    ? [
+        "Akhirnya tiba juga ya Cayaang.",
+        "Hari ini aku cuma mau kamu ngerasa paling disayang.",
+      ]
+    : [
+        "Aku nggak mau ngasih banyak bocoran dulu.",
+        "Kamu kan kecayangan aku yang suka banget dikasih surprise.",
+        "Yang jelas, ada sesuatu yang lagi aku siapin buat kamu, cayaang :). Tungguin aja ya!",
+      ];
 
   return (
     <main className="countdown-page">
@@ -66,9 +76,11 @@ export default function Home() {
         </p>
         <h1>Tinggal Nunggu Hari Kamu</h1>
         <p className="subtitle">
-          {timeLeft.isDone
-            ? "Akhirnya sampai juga. Hari ini aku cuma mau kamu ngerasa paling disayang."
-            : "Aku nggak mau ngasih banyak bocorin dulu. Yang jelas, ada sesuatu yang lagi aku siapin buat kamu cayaang :)."}
+          {subtitleLines.map((line) => (
+            <span className="subtitle-line" key={line}>
+              {line}
+            </span>
+          ))}
         </p>
 
         <div className="countdown-grid">
@@ -87,7 +99,9 @@ export default function Home() {
           <span>Hari yang kamu tunggu</span>
         </div>
         <p className="sweet-note">
-          Aku cuma pengen pas hari itu tiba bakalan jadi salah satu momen kecil yang kamu inget sambil senyum xixi. ~ Brokoli Kecayangan Kamu</p>
+          Aku cuma pengen pas hari itu tiba bakalan jadi salah satu momen kecil
+          yang kamu inget sambil senyum xixi. ~ Brokoli Kecayangan Kamu
+        </p>
       </section>
     </main>
   );

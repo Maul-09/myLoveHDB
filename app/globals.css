@@ -241,6 +241,14 @@ h1 {
   font-weight: 560;
 }
 
+.subtitle-line {
+  display: block;
+}
+
+.subtitle-line + .subtitle-line {
+  margin-top: 2px;
+}
+
 .countdown-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(136px, 1fr));
