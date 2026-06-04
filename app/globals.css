@@ -19,6 +19,7 @@
 html,
 body {
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -467,6 +468,30 @@ h1 {
   overflow-wrap: break-word;
 }
 
+.surprise-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 184px;
+  min-height: 46px;
+  margin-top: 18px;
+  padding: 0 22px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(255, 126, 181, 0.82), rgba(78, 169, 229, 0.74)),
+    rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 16px 34px rgba(97, 68, 130, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.92);
+  cursor: not-allowed;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 820;
+  opacity: 0.62;
+}
+
 @keyframes dreamyGradient {
   0% {
     transform: translate3d(-2%, -1%, 0) rotate(0deg) scale(1);
@@ -514,8 +539,10 @@ h1 {
 
 @media (max-width: 760px) {
   .countdown-page {
+    height: 100svh;
     min-height: 100svh;
     align-items: center;
+    overflow: hidden;
     padding: 56px 16px 38px;
   }
 
@@ -591,7 +618,7 @@ h1 {
 
 @media (max-width: 560px) {
   .countdown-page {
-    padding: 42px 14px 30px;
+    padding: 24px 14px 20px;
   }
 
   .decor-layer {
@@ -613,38 +640,38 @@ h1 {
   }
 
   .eyebrow {
-    margin-bottom: 14px;
-    padding: 8px 13px;
-    font-size: 0.88rem;
+    margin-bottom: 10px;
+    padding: 7px 12px;
+    font-size: 0.84rem;
   }
 
   .letter-spotlight {
-    width: 96px;
-    height: 70px;
-    margin-bottom: 6px;
+    width: 82px;
+    height: 58px;
+    margin-bottom: 4px;
   }
 
   .love-letter {
-    width: 78px;
-    height: 54px;
+    width: 66px;
+    height: 46px;
   }
 
   .love-letter::after {
-    top: 22px;
-    width: 16px;
-    height: 16px;
+    top: 18px;
+    width: 14px;
+    height: 14px;
   }
 
   h1 {
-    font-size: 2.72rem;
+    font-size: 2.34rem;
   }
 
   .subtitle {
     width: min(430px, 100%);
-    margin-top: 16px;
-    padding: 15px 14px;
-    font-size: 0.98rem;
-    line-height: 1.62;
+    margin-top: 12px;
+    padding: 11px 12px;
+    font-size: 0.9rem;
+    line-height: 1.42;
   }
 
   .subtitle-line + .subtitle-line {
@@ -653,16 +680,16 @@ h1 {
 
   .countdown-grid {
     gap: 10px;
-    margin-top: 28px;
+    margin-top: 20px;
   }
 
   .countdown-unit {
-    min-height: 124px;
-    padding: 28px 8px 16px;
+    min-height: 102px;
+    padding: 22px 8px 13px;
   }
 
   .countdown-number {
-    font-size: 2.48rem;
+    font-size: 2.14rem;
   }
 
   .countdown-label {
@@ -672,20 +699,33 @@ h1 {
 
   .target-row {
     gap: 8px;
-    margin-top: 22px;
+    margin-top: 16px;
+  }
+
+  .target-row span {
+    padding: 7px 10px;
+    font-size: 0.82rem;
   }
 
   .sweet-note {
     width: min(430px, 100%);
-    margin-top: 14px;
-    font-size: 0.9rem;
-    line-height: 1.55;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    line-height: 1.36;
+  }
+
+  .surprise-button {
+    min-width: 160px;
+    min-height: 40px;
+    margin-top: 12px;
+    padding: 0 18px;
+    font-size: 0.86rem;
   }
 }
 
 @media (max-width: 420px) {
   .countdown-page {
-    padding: 34px 12px 26px;
+    padding: 20px 12px 18px;
   }
 
   .countdown-content::before {
@@ -693,7 +733,7 @@ h1 {
   }
 
   h1 {
-    font-size: 2.34rem;
+    font-size: 2.08rem;
   }
 
   .countdown-grid {
@@ -701,17 +741,17 @@ h1 {
   }
 
   .countdown-unit {
-    min-height: 116px;
+    min-height: 96px;
   }
 
   .countdown-number {
-    font-size: 2.16rem;
+    font-size: 1.94rem;
   }
 
   .countdown-label,
   .target-row span,
   .sweet-note {
-    font-size: 0.88rem;
+    font-size: 0.78rem;
   }
 }
 
@@ -736,11 +776,11 @@ h1 {
   }
 
   h1 {
-    font-size: 2.08rem;
+    font-size: 1.9rem;
   }
 
   .subtitle {
-    font-size: 0.92rem;
+    font-size: 0.84rem;
     padding-inline: 12px;
   }
 
@@ -749,12 +789,12 @@ h1 {
   }
 
   .countdown-unit {
-    min-height: 106px;
+    min-height: 88px;
     padding-inline: 6px;
   }
 
   .countdown-number {
-    font-size: 1.95rem;
+    font-size: 1.72rem;
   }
 
   .target-row {

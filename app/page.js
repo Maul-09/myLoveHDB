@@ -55,9 +55,9 @@ export default function Home() {
         "Hari ini aku cuma mau kamu ngerasa paling disayang.",
       ]
     : [
-        "Aku nggak mau ngasih banyak bocoran dulu.",
+        "Aku nggak mau ngasih banyak bocoran dulu xixi.",
         "Kamu kan kecayangan aku yang suka banget dikasih surprise.",
-        "Yang jelas, ada sesuatu yang lagi aku siapin buat kamu, cayaang :). Tungguin aja ya!",
+        "Yang jelas, ada sesuatu yang lagi aku siapin buat kamu, cayaang :) Tungguin aja ya!",
       ];
 
   return (
@@ -78,7 +78,7 @@ export default function Home() {
           Hai, sayang
           <span className="mini-spark" aria-hidden="true" />
         </p>
-        <h1>Tinggal Nunggu Hari Kamu</h1>
+        <h1>Lagi Nungguin Hari Kamu nih</h1>
         <p className="subtitle">
           {subtitleLines.map((line) => (
             <span className="subtitle-line" key={line}>
@@ -106,6 +106,10 @@ export default function Home() {
           Aku cuma pengen pas hari itu tiba bakalan jadi salah satu momen kecil
           yang kamu inget sambil senyum xixi. ~ Brokoli Kecayangan Kamu
         </p>
+
+        <button className="surprise-button" type="button" disabled>
+          Buka surprise
+        </button>
       </section>
     </main>
   );
