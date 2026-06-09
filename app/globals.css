@@ -812,3 +812,130 @@ h1 {
     animation-iteration-count: 1 !important;
   }
 }
+
+
+
+/* Surprise page redesign */
+html { overflow-y: auto; }
+body { overflow-y: clip; }
+
+.letter-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100dvh;
+  overflow-x: clip;
+  overflow-y: visible;
+  padding: 54px 20px 44px;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(255,255,255,.72), transparent 24%),
+    radial-gradient(circle at 88% 18%, rgba(255,226,122,.34), transparent 22%),
+    radial-gradient(circle at 82% 86%, rgba(153,221,255,.44), transparent 26%),
+    linear-gradient(135deg, #fff7fb 0%, #ffe2ef 36%, #e8f8ff 100%);
+}
+
+.letter-page::before {
+  position: absolute;
+  inset: -30%;
+  z-index: -3;
+  content: "";
+  background: conic-gradient(from 160deg at 50% 34%, rgba(255,255,255,.82), rgba(255,126,181,.28), rgba(153,221,255,.38), rgba(255,226,122,.2), rgba(255,255,255,.78));
+  filter: blur(50px);
+  animation: dreamyGradient 22s ease-in-out infinite alternate;
+}
+
+.letter-page::after {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  content: "";
+  background-image: radial-gradient(rgba(255,126,181,.16) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.42), transparent 70%);
+}
+
+.letter-shell { position: relative; z-index: 2; width: min(1040px, 100%); margin: 0 auto; }
+.letter-hero-card, .memory-card, .letter-paper {
+  border: 1px solid rgba(255,255,255,.82);
+  background: rgba(255,255,255,.68);
+  box-shadow: rgba(0,0,0,.02) 0 0 0 1px, rgba(94,59,124,.08) 0 18px 44px, rgba(94,59,124,.1) 0 26px 64px;
+  backdrop-filter: blur(22px);
+}
+
+.letter-hero-card { overflow: hidden; padding: 28px; border-radius: 32px; }
+.letter-topline { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 24px; padding: 9px 14px; border: 1px solid rgba(255,255,255,.82); border-radius: 999px; background: rgba(255,255,255,.62); color: #7a4268; font-size: .92rem; font-weight: 850; }
+.letter-hero-grid { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(260px,.85fr); gap: 28px; align-items: center; }
+.letter-kicker { margin: 0 0 10px; color: rgba(122,66,104,.82); font-size: .98rem; font-weight: 850; }
+.letter-hero-copy h1 { margin: 0; max-width: 720px; background: linear-gradient(90deg,#e94692,#4a9cdb 56%,#e94692); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; font-size: clamp(2.45rem,6vw,5.15rem); line-height: .98; font-weight: 950; letter-spacing: -.06em; }
+.letter-intro { max-width: 590px; margin: 20px 0 0; color: rgba(60,43,78,.72); font-size: clamp(1rem,2vw,1.18rem); line-height: 1.72; font-weight: 600; }
+
+.birthday-orbit { position: relative; display: grid; min-height: 310px; place-items: center; }
+.orbit-ring { position: absolute; width: min(260px,80vw); aspect-ratio: 1; border: 1px dashed rgba(233,70,146,.28); border-radius: 50%; animation: orbitSpin 18s linear infinite; }
+.cake-card { position: relative; z-index: 1; display: grid; width: 178px; aspect-ratio: 1; place-items: center; border: 1px solid rgba(255,255,255,.86); border-radius: 36px; background: linear-gradient(145deg, rgba(255,255,255,.76), rgba(255,212,232,.64)); box-shadow: 0 24px 56px rgba(122,66,104,.16); font-size: 5.4rem; transform: rotate(-6deg); animation: cakeFloat 5.8s ease-in-out infinite; }
+.floating-note { position: absolute; z-index: 2; padding: 8px 12px; border: 1px solid rgba(255,255,255,.78); border-radius: 999px; background: rgba(255,255,255,.7); color: #7a4268; font-size: .82rem; font-weight: 900; }
+.note-one { top: 42px; right: 38px; transform: rotate(8deg); }
+.note-two { left: 36px; bottom: 46px; transform: rotate(-10deg); }
+
+.letter-memory-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; margin: 18px 0; }
+.memory-card { padding: 20px; border-radius: 24px; }
+.memory-icon { display: grid; width: 38px; height: 38px; place-items: center; margin-bottom: 14px; border-radius: 14px; background: linear-gradient(135deg, rgba(255,126,181,.18), rgba(153,221,255,.2)); color: #e94692; font-size: 1.18rem; font-weight: 900; }
+.memory-card h2 { margin: 0; color: #332741; font-size: 1.08rem; line-height: 1.2; font-weight: 900; }
+.memory-card p { margin: 8px 0 0; color: rgba(60,43,78,.68); font-size: .94rem; line-height: 1.56; font-weight: 560; }
+
+.letter-paper { position: relative; overflow: hidden; padding: 38px 42px; border-radius: 28px; background: linear-gradient(180deg, rgba(255,255,255,.9), rgba(255,250,253,.74)); }
+.letter-body { display: grid; gap: 18px; }
+.letter-body p { margin: 0; color: rgba(51,39,65,.84); font-size: clamp(.98rem,1.7vw,1.08rem); line-height: 1.86; font-weight: 560; }
+.letter-signature { display: grid; gap: 4px; margin-top: 34px; padding: 18px 20px; border-radius: 22px; background: linear-gradient(135deg, rgba(255,126,181,.1), rgba(153,221,255,.12)); color: rgba(60,43,78,.74); font-size: 1rem; }
+.letter-signature strong { color: #7a4268; font-size: 1.16rem; }
+.letter-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.letter-link, .letter-next-button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border-radius: 999px; font: inherit; font-size: .92rem; font-weight: 850; text-decoration: none; }
+.letter-link { border: 1px solid rgba(255,255,255,.78); background: rgba(255,255,255,.62); color: rgba(60,43,78,.82); }
+.letter-next-button { border: 1px solid rgba(255,255,255,.78); background: linear-gradient(135deg, rgba(255,126,181,.72), rgba(78,169,229,.66)); color: rgba(255,255,255,.9); cursor: not-allowed; opacity: .56; }
+
+@keyframes orbitSpin { to { transform: rotate(360deg); } }
+@keyframes cakeFloat { 0%,100% { transform: translateY(0) rotate(-6deg); } 50% { transform: translateY(-10px) rotate(-2deg); } }
+
+@media (max-width: 860px) {
+  .letter-hero-grid { grid-template-columns: 1fr; }
+  .birthday-orbit { min-height: 240px; order: -1; }
+  .cake-card { width: 142px; border-radius: 30px; font-size: 4.2rem; }
+  .orbit-ring { width: 214px; }
+  .letter-memory-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .letter-page { padding: 18px 12px 24px; }
+  .letter-hero-card { padding: 20px 16px; border-radius: 26px; }
+  .letter-topline { margin-bottom: 18px; }
+  .letter-hero-copy h1 { font-size: clamp(2.15rem,15vw,3.4rem); letter-spacing: -.055em; }
+  .letter-intro { margin-top: 16px; font-size: .98rem; line-height: 1.64; }
+  .birthday-orbit { min-height: 190px; }
+  .cake-card { width: 118px; border-radius: 26px; font-size: 3.45rem; }
+  .orbit-ring { width: 178px; }
+  .floating-note { padding: 7px 10px; font-size: .74rem; }
+  .note-one { top: 18px; right: 18px; }
+  .note-two { left: 18px; bottom: 24px; }
+  .memory-card { padding: 17px; border-radius: 22px; }
+  .letter-paper { padding: 28px 18px 22px; border-radius: 24px; background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,250,253,.78)); }
+  .letter-body { gap: 15px; }
+  .letter-body p { padding-left: 0; font-size: .94rem; line-height: 1.72; }
+  .letter-body p::before, .letter-paper::before { display: none; }
+  .letter-signature { padding: 16px; }
+  .letter-actions { display: grid; }
+  .letter-link, .letter-next-button { width: 100%; }
+}
+
+
+
+.surprise-button-ready {
+  cursor: pointer;
+  opacity: 1;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.surprise-button-ready:hover {
+  box-shadow: 0 22px 44px rgba(97, 68, 130, 0.2);
+  transform: translateY(-2px);
+}

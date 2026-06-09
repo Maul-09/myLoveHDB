@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
 const TARGET_DATE = new Date("2026-07-09T00:00:00+07:00").getTime();
@@ -107,10 +108,17 @@ export default function Home() {
           yang kamu inget sambil senyum xixi. ~ Brokoli Kecayangan Kamu
         </p>
 
-        <button className="surprise-button" type="button" disabled>
-          Buka surprise
-        </button>
+        {timeLeft.isDone ? (
+          <Link className="surprise-button surprise-button-ready" href="/surprise">
+            Buka surprise
+          </Link>
+        ) : (
+          <button className="surprise-button" type="button" disabled>
+            Buka surprise
+          </button>
+        )}
       </section>
     </main>
   );
 }
+
