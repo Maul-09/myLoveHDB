@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import StoryLink from "./components/StoryLink";
+import { SURPRISE_TIMESTAMP } from "./lib/surprise";
 
-const TARGET_DATE = new Date("2026-07-09T00:00:00+07:00").getTime();
 const DECORATIONS = [
   "heart heart-one",
   "heart heart-two",
@@ -11,7 +11,7 @@ const DECORATIONS = [
 ];
 
 function getTimeLeft() {
-  const distance = Math.max(0, TARGET_DATE - Date.now());
+  const distance = Math.max(0, SURPRISE_TIMESTAMP - Date.now());
 
   return {
     days: Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -101,24 +101,17 @@ export default function Home() {
 
         <div className="target-row">
           <span>9 Juli 2026</span>
-          <span>Hari yang kamu tunggu</span>
+          <span>Hari kamu genap 23 tahun</span>
         </div>
         <p className="sweet-note">
           Aku cuma pengen pas hari itu tiba bakalan jadi salah satu momen kecil
           yang kamu inget sambil senyum xixi. ~ Brokoli Kecayangan Kamu
         </p>
 
-        {timeLeft.isDone ? (
-          <Link className="surprise-button surprise-button-ready" href="/surprise">
-            Buka surprise
-          </Link>
-        ) : (
-          <button className="surprise-button" type="button" disabled>
-            Buka surprise
-          </button>
-        )}
+        <div className="countdown-cta">
+          <StoryLink href="/surprise">Buka surprise</StoryLink>
+        </div>
       </section>
     </main>
   );
 }
-
