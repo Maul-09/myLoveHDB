@@ -9,6 +9,13 @@ const DECORATIONS = [
   "heart heart-two",
   "spark spark-one",
 ];
+const INITIAL_TIME_LEFT = {
+  days: 0,
+  hours: 0,
+  minutes: 0,
+  seconds: 0,
+  isDone: false,
+};
 
 function getTimeLeft() {
   const distance = Math.max(0, SURPRISE_TIMESTAMP - Date.now());
@@ -28,7 +35,7 @@ function formatUnit(value) {
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(getTimeLeft);
+  const [timeLeft, setTimeLeft] = useState(INITIAL_TIME_LEFT);
 
   useEffect(() => {
     setMounted(true);
@@ -50,15 +57,16 @@ export default function Home() {
     ],
     [timeLeft],
   );
-  const subtitleLines = timeLeft.isDone
+  const isCountdownDone = mounted && timeLeft.isDone;
+  const subtitleLines = isCountdownDone
     ? [
         "Akhirnya tiba juga ya Cayaang.",
         "Hari ini aku cuma mau kamu ngerasa paling disayang.",
       ]
     : [
-        "Aku nggak mau ngasih banyak bocoran dulu xixi.",
-        "Kamu kan kecayangan aku yang suka banget dikasih surprise.",
-        "Yang jelas, ada sesuatu yang lagi aku siapin buat kamu, cayaang :) Tungguin aja ya!",
+        "Aku sengaja nggak mau banyak kasih bocoran dulu, xixi.",
+        "Aku pengin kamu menikmati semuanya pelan-pelan, satu per satu.",
+        "Karena ada sesuatu yang udah aku siapin dengan sepenuh hati, khusus buat kamu. Jadi, tungguin ya, cayaang. 🤍"
       ];
 
   return (

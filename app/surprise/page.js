@@ -14,7 +14,7 @@ export default function SurprisePage() {
       </div>
 
       <section className="opening-shell" aria-labelledby="opening-title">
-        <p className="story-progress">01 / 05</p>
+        <p className="story-progress">01 / 04</p>
 
         <div className="opening-envelope" aria-hidden="true">
           <span className="envelope-paper" />
@@ -23,10 +23,9 @@ export default function SurprisePage() {
         </div>
 
         <p className="story-eyebrow">A little surprise for you</p>
-        <h1 id="opening-title">Akhirnya hari kamu datang juga</h1>
+        <h1 id="opening-title">Akhirnya hari ulang tahun kamu datang juga sayang 🤍</h1>
         <p className="story-lead">
-          Ada beberapa hal yang pengin aku ceritain pelan-pelan. Jadi, ambil
-          waktunya sebentar dan buka satu per satu ya, Cayaang.
+          Hari ini aku cuma ingin kamu meluangkan sedikit waktu untuk membaca sesuatu yang aku siapkan khusus buat kamu Cayaang
         </p>
 
         <div className="story-actions story-actions-center">

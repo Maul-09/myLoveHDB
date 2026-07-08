@@ -3,29 +3,29 @@ import StoryLink from "../components/StoryLink";
 const MOMENTS = [
   {
     marker: "01",
-    title: "Semua yang sudah kamu lewati",
-    text: "Ada banyak hari yang mungkin nggak mudah, tapi kamu berhasil sampai sejauh ini dengan caramu sendiri.",
+    title: "Sejauh ini, kamu hebat.",
+    text: "Nggak semua hari yang kamu lewatin itu mudah, tapi kamu berhasil sampai di titik ini dan itu layak buat dibanggakan.",
   },
   {
     marker: "02",
-    title: "Diri kamu yang sekarang",
-    text: "Kamu tumbuh jadi perempuan yang kuat, hangat, lucu, dan tetap punya sisi manja yang paling aku sayang.",
+    title: "Tetap jadi kamu.",
+    text: "Aku suka cara kamu tumbuh tanpa kehilangan sisi hangat, lucu dan manja yang selalu bikin aku senyum.",
   },
   {
     marker: "03",
-    title: "Hal baik yang menunggu",
-    text: "Semoga usia 23 membawa lebih banyak tenang, kesempatan baru, dan hal-hal baik yang selama ini kamu tunggu.",
+    title: "Semoga lebih banyak bahagia.",
+    text: "Semoga umur 23 membawa lebih banyak ketenangan kesempatan baru, dan alasan buat kamu tersenyum.",
   },
   {
     marker: "04",
-    title: "Satu tahun yang baru",
-    text: "Nggak perlu punya semua jawabannya sekarang. Jalanin pelan-pelan, aku akan tetap ada buat dengerin cerita kamu.",
+    title: "Aku ada di sini.",
+    text: "Nggak perlu buru-buru. Jalanin semuanya pelan-pelan aja ya sayang soalnya aku akan selalu siap dengerin cerita kamu.",
   },
 ];
 
 export const metadata = {
   title: "Tentang Kamu di Usia 23",
-  description: "Hal-hal baik untuk langkah baru di usia 23.",
+  description: "Hal-hal kecil yang ingin aku sampaikan di hari spesialmu.",
 };
 
 export default function OurStoryPage() {
@@ -33,13 +33,16 @@ export default function OurStoryPage() {
     <main className="story-page story-timeline-page">
       <section className="story-shell" aria-labelledby="timeline-title">
         <div className="story-heading story-heading-center">
-          <p className="story-progress">03 / 05</p>
-          <p className="story-eyebrow">Chapter twenty-three</p>
-          <h1 id="timeline-title">Selamat datang di usia 23</h1>
-          <p className="story-lead">
-            Satu bab baru buat kamu, dengan lebih banyak ruang untuk tumbuh,
-            istirahat, mencoba, dan bahagia.
-          </p>
+          <p className="story-progress">03 / 04</p>
+          <p className="story-eyebrow">Chapter Twenty-Three</p>
+            <h1 id="timeline-title">
+              Untuk kamu, di usia 23.
+            </h1>
+
+            <p className="story-lead">
+              Semoga tahun ini dipenuhi lebih banyak
+              tenang, tawa dan hal-hal baik yang pantas kamu dapatkan.
+            </p>
         </div>
 
         <div className="relationship-timeline">

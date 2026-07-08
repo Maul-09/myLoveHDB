@@ -39,7 +39,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: clip;
-  padding: 72px 24px 56px;
+  padding: clamp(28px, 6vh, 56px) 24px clamp(24px, 5vh, 44px);
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.08)),
     linear-gradient(120deg, #ffe1ef 0%, #ffcce5 34%, #dff5ff 72%, #bdeaff 100%);
@@ -78,6 +78,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 0;
+  opacity: 0.72;
   pointer-events: none;
 }
 
@@ -186,8 +187,8 @@ body {
 .letter-spotlight {
   position: relative;
   display: grid;
-  width: 128px;
-  height: 98px;
+  width: 112px;
+  height: 84px;
   place-items: center;
   margin: 0 auto 10px;
 }
@@ -206,8 +207,8 @@ body {
 .love-letter {
   position: relative;
   display: block;
-  width: 104px;
-  height: 72px;
+  width: 90px;
+  height: 62px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.88);
   border-radius: 8px;
@@ -310,10 +311,16 @@ h1 {
   overflow-wrap: break-word;
 }
 
+.countdown-page h1 {
+  max-width: 14ch;
+  margin-inline: auto;
+  font-size: clamp(2.72rem, 5vw, 4rem);
+}
+
 .subtitle {
   width: min(590px, 100%);
-  margin: 22px auto 0;
-  padding: 18px 22px;
+  margin: 16px auto 0;
+  padding: 15px 20px;
   border: 1px solid rgba(255, 255, 255, 0.66);
   border-radius: 8px;
   background:
@@ -323,8 +330,8 @@ h1 {
     0 18px 42px rgba(106, 72, 128, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.72);
   color: rgba(60, 43, 78, 0.78);
-  font-size: 1.13rem;
-  line-height: 1.75;
+  font-size: 1.04rem;
+  line-height: 1.58;
   font-weight: 560;
   overflow-wrap: break-word;
   backdrop-filter: blur(18px);
@@ -340,20 +347,20 @@ h1 {
 
 .countdown-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(136px, 1fr));
+  grid-template-columns: repeat(4, minmax(126px, 1fr));
   gap: 14px;
   width: 100%;
-  margin: 34px auto 0;
+  margin: 24px auto 0;
 }
 
 .countdown-unit {
   position: relative;
   display: grid;
-  min-height: 154px;
+  min-height: 128px;
   align-content: center;
   justify-items: center;
   overflow: hidden;
-  padding: 34px 14px 22px;
+  padding: 28px 14px 18px;
   border: 1px solid rgba(255, 255, 255, 0.82);
   border-radius: 8px;
   background:
@@ -425,7 +432,7 @@ h1 {
 .countdown-number {
   font-variant-numeric: tabular-nums;
   color: #322640;
-  font-size: 3.42rem;
+  font-size: clamp(2.45rem, 4vw, 3.2rem);
   line-height: 1;
   font-weight: 900;
   text-shadow: 0 3px 0 rgba(255, 255, 255, 0.7);
@@ -443,7 +450,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin: 26px 0 0;
+  margin: 18px 0 0;
 }
 
 .target-row span {
@@ -460,10 +467,10 @@ h1 {
 
 .sweet-note {
   width: min(560px, 100%);
-  margin: 16px auto 0;
+  margin: 10px auto 0;
   color: rgba(60, 43, 78, 0.7);
-  font-size: 0.98rem;
-  line-height: 1.65;
+  font-size: 0.92rem;
+  line-height: 1.48;
   font-weight: 560;
   overflow-wrap: break-word;
 }
@@ -534,6 +541,88 @@ h1 {
 
   50% {
     transform: translateY(-8px) rotate(-2deg);
+  }
+}
+
+@media (min-width: 761px) and (max-height: 760px) {
+  .countdown-page {
+    height: 100dvh;
+    min-height: 100dvh;
+    padding: 18px 24px;
+  }
+
+  .countdown-page .letter-spotlight {
+    width: 76px;
+    height: 54px;
+    margin-bottom: 2px;
+  }
+
+  .countdown-page .love-letter {
+    width: 60px;
+    height: 42px;
+  }
+
+  .countdown-page .love-letter::after {
+    top: 16px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .countdown-page .eyebrow {
+    margin-bottom: 10px;
+  }
+
+  .countdown-page h1 {
+    font-size: 2.72rem;
+    line-height: 1.04;
+  }
+
+  .countdown-page .subtitle {
+    margin-top: 10px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    line-height: 1.36;
+  }
+
+  .countdown-page .countdown-grid {
+    margin-top: 14px;
+  }
+
+  .countdown-page .countdown-unit {
+    min-height: 92px;
+    padding: 21px 10px 12px;
+  }
+
+  .countdown-page .countdown-number {
+    font-size: 2.12rem;
+  }
+
+  .countdown-page .countdown-label {
+    margin-top: 6px;
+  }
+
+  .countdown-page .target-row {
+    margin-top: 12px;
+  }
+
+  .countdown-page .target-row span {
+    padding: 7px 10px;
+    font-size: 0.82rem;
+  }
+
+  .countdown-page .sweet-note {
+    margin-top: 7px;
+    font-size: 0.8rem;
+    line-height: 1.32;
+  }
+
+  .countdown-page .countdown-cta {
+    margin-top: 8px;
+  }
+
+  .countdown-page .story-link {
+    min-height: 38px;
+    font-size: 0.84rem;
   }
 }
 
@@ -725,33 +814,80 @@ h1 {
 
 @media (max-width: 420px) {
   .countdown-page {
-    padding: 20px 12px 18px;
+    padding: 14px 12px;
   }
 
   .countdown-content::before {
-    height: 210px;
+    height: 190px;
+  }
+
+  .letter-spotlight {
+    width: 68px;
+    height: 48px;
+    margin-bottom: 2px;
+  }
+
+  .love-letter {
+    width: 54px;
+    height: 38px;
+  }
+
+  .love-letter::after {
+    top: 14px;
+    width: 12px;
+    height: 12px;
   }
 
   h1 {
-    font-size: 2.08rem;
+    font-size: 1.9rem;
+    line-height: 1.06;
+  }
+
+  .subtitle {
+    margin-top: 8px;
+    padding: 9px 11px;
+    line-height: 1.32;
   }
 
   .countdown-grid {
-    gap: 10px;
+    gap: 8px;
+    margin-top: 12px;
   }
 
   .countdown-unit {
-    min-height: 96px;
+    min-height: 82px;
+    padding: 18px 7px 10px;
   }
 
   .countdown-number {
-    font-size: 1.94rem;
+    font-size: 1.78rem;
+  }
+
+  .countdown-label {
+    margin-top: 5px;
+  }
+
+  .target-row {
+    margin-top: 10px;
+  }
+
+  .sweet-note {
+    margin-top: 7px;
+    line-height: 1.28;
+  }
+
+  .countdown-cta {
+    margin-top: 8px;
+  }
+
+  .countdown-page .story-link {
+    min-height: 36px;
   }
 
   .countdown-label,
   .target-row span,
   .sweet-note {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
   }
 }
 
@@ -1362,72 +1498,55 @@ body.route-leaving .route-stage {
 /* Memories */
 .memories-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(310px, 0.9fr);
-  gap: 28px;
+  grid-template-columns: minmax(0, 0.78fr) minmax(310px, 1fr);
+  gap: 24px;
   align-items: start;
 }
 
 .photo-strip {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .photo-placeholder {
+  height: 112px;
   margin: 0;
-  padding: 10px 10px 14px;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.82);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 20px 44px rgba(91, 65, 126, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 22px 54px rgba(91, 65, 126, 0.13);
 }
 
-.photo-placeholder:nth-child(1) { transform: rotate(-2deg); }
-.photo-placeholder:nth-child(2) { transform: translateY(16px); }
-.photo-placeholder:nth-child(3) { transform: rotate(2deg); }
-
-.photo-empty-state {
-  display: grid;
-  aspect-ratio: 4 / 5;
-  place-content: center;
-  border-radius: 5px;
-  background:
-    radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.76), transparent 28%),
-    linear-gradient(145deg, rgba(255, 183, 215, 0.64), rgba(164, 224, 251, 0.72));
-  color: rgba(74, 52, 89, 0.72);
-  text-align: center;
+.photo-placeholder:nth-child(5) {
+  grid-column: span 2;
+  height: 124px;
 }
 
-.photo-empty-state span {
-  font-size: 1.7rem;
-  font-weight: 900;
-}
-
-.photo-empty-state small {
-  margin-top: 4px;
-  font-size: 0.72rem;
-  font-weight: 800;
-}
-
-.photo-placeholder figcaption {
-  margin-top: 10px;
-  color: rgba(51, 39, 65, 0.68);
-  font-size: 0.8rem;
-  line-height: 1.45;
+.photo-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .little-things-panel {
-  padding: 26px;
+  display: grid;
+  align-content: center;
+  padding: 24px;
   border: 1px solid rgba(255, 255, 255, 0.78);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.58);
+  border-radius: 22px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.42)),
+    linear-gradient(120deg, rgba(255, 126, 181, 0.1), rgba(153, 221, 255, 0.1));
   box-shadow: 0 24px 56px rgba(91, 65, 126, 0.1);
   backdrop-filter: blur(18px);
 }
 
 .little-things-list {
   display: grid;
-  gap: 0;
+  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1435,25 +1554,38 @@ body.route-leaving .route-stage {
 
 .little-things-list li {
   display: grid;
-  grid-template-columns: 34px 1fr;
+  grid-template-columns: 38px 1fr;
   gap: 12px;
-  align-items: baseline;
-  padding: 13px 0;
-  border-bottom: 1px solid rgba(122, 88, 140, 0.1);
+  align-items: start;
+  padding: 14px;
+  border: 1px solid rgba(122, 88, 140, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.46);
 }
 
-.little-things-list li:last-child { border-bottom: 0; }
-
 .little-things-list span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 126, 181, 0.18);
   color: #be638f;
   font-size: 0.76rem;
   font-weight: 900;
 }
 
 .little-things-list p {
+  display: grid;
+  gap: 4px;
   margin: 0;
   color: rgba(51, 39, 65, 0.74);
-  line-height: 1.55;
+  line-height: 1.5;
+}
+
+.little-things-list strong {
+  color: #55334e;
+  line-height: 1.25;
 }
 
 /* Final */
@@ -1465,48 +1597,51 @@ body.route-leaving .route-stage {
 
 .final-shell { max-width: 760px; }
 
-.final-gift {
+.shoe-reveal-card {
   position: relative;
-  width: 156px;
-  height: 142px;
-  margin: 0 auto 24px;
-  filter: drop-shadow(0 26px 30px rgba(91, 65, 126, 0.16));
+  width: min(520px, 100%);
+  margin: 0 auto 28px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.42)),
+    linear-gradient(120deg, rgba(255, 126, 181, 0.1), rgba(153, 221, 255, 0.12));
+  box-shadow: 0 28px 72px rgba(91, 65, 126, 0.14);
+  backdrop-filter: blur(18px);
   animation: giftHover 6s ease-in-out infinite;
 }
 
-.gift-box,
-.gift-lid {
+.shoe-reveal-card::before {
   position: absolute;
-  left: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.86);
-  background: linear-gradient(145deg, #ffd4e8, #9fdfff);
-  transform: translateX(-50%);
-}
-
-.gift-box {
-  bottom: 0;
-  width: 126px;
-  height: 98px;
+  inset: 16px;
+  z-index: -1;
   border-radius: 8px;
+  content: "";
+  background: radial-gradient(circle at 50% 44%, rgba(255, 126, 181, 0.2), transparent 62%);
+  filter: blur(18px);
 }
 
-.gift-lid {
-  top: 26px;
-  z-index: 2;
-  width: 144px;
-  height: 34px;
-  border-radius: 8px;
-}
-
-.gift-ribbon {
+.shoe-badge {
   position: absolute;
-  top: 26px;
-  bottom: 0;
-  left: 50%;
-  z-index: 3;
-  width: 18px;
-  background: rgba(238, 119, 173, 0.78);
-  transform: translateX(-50%);
+  top: 18px;
+  left: 18px;
+  z-index: 1;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  color: #8a4f72;
+  font-size: 0.78rem;
+  font-weight: 900;
+  backdrop-filter: blur(12px);
+}
+
+.shoe-reveal-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .reveal-placeholder {
@@ -1615,19 +1750,21 @@ body.route-leaving .route-stage {
     line-height: 1.62;
     text-align: left;
   }
-  .photo-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
-  .photo-placeholder { padding: 7px 7px 10px; }
-  .photo-placeholder:first-child { grid-column: 1 / -1; transform: none; }
-  .photo-placeholder:first-child .photo-empty-state { aspect-ratio: 16 / 9; }
-  .photo-placeholder:nth-child(2),
-  .photo-placeholder:nth-child(3) { transform: none; }
-  .photo-empty-state span { font-size: 1.3rem; }
-  .photo-placeholder figcaption { font-size: 0.72rem; }
+  .photo-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .photo-placeholder,
+  .photo-placeholder:nth-child(5) {
+    grid-column: auto;
+    grid-row: auto;
+    height: 104px;
+  }
+  .photo-placeholder:nth-child(5) {
+    grid-column: 1 / -1;
+    height: 116px;
+  }
   .little-things-panel { padding: 20px 16px; }
   .little-things-list p { font-size: 0.88rem; }
-  .final-gift { width: 130px; height: 120px; }
-  .gift-box { width: 106px; height: 82px; }
-  .gift-lid { width: 120px; }
+  .shoe-reveal-card { margin-bottom: 22px; padding: 12px; }
+  .shoe-badge { top: 12px; left: 12px; padding: 7px 10px; font-size: 0.72rem; }
   .reveal-placeholder { margin-top: 22px; padding: 20px 16px; }
   .final-message { margin-top: 20px; font-size: 0.94rem; }
   .story-actions { gap: 10px; margin-top: 22px; }
@@ -1690,7 +1827,7 @@ body.route-leaving .route-stage {
   .envelope-paper,
   .ambient-heart,
   .ambient-star,
-  .final-gift {
+  .shoe-reveal-card {
     animation: none !important;
   }
 }

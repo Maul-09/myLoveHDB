@@ -1,29 +1,34 @@
 import StoryLink from "../components/StoryLink";
 
 const LETTER_PARAGRAPHS = [
-  "Akhirnya sampai juga di halaman kecil yang aku siapin buat kamu. Bacanya pelan-pelan ya, nggak usah buru-buru. Hari ini aku cuma pengin kamu ngerasa benar-benar dirayain.",
-  "Selamat ulang tahun, Cayaang. Makasih udah jadi kamu, yang lucu, random, bawel, manja, kuat, kadang nyebelin dikit, tapi tetap jadi orang yang paling aku sayang.",
-  "Banyak hal kecil dari kamu yang mungkin terasa biasa. Tapi buat aku, cara kamu cerita, ketawa, ngambek, sampai hal receh yang cuma kita berdua ngerti selalu berhasil bikin hari terasa lebih hangat.",
-  "Aku nggak cuma pengin bilang semoga panjang umur dan bahagia. Aku pengin kamu tahu kalau kehadiran kamu berarti banget. Kamu pantas dirayain, didengerin, dan disayang tanpa harus jadi siapa-siapa selain diri kamu sendiri.",
-  "Sekarang kamu masuk usia 23. Aku tahu perjalanan sampai di umur ini nggak selalu gampang, jadi aku bangga banget sama kamu yang tetap bertahan, tetap mencoba, dan terus tumbuh jadi versi kamu yang sekarang.",
-  "Semoga di umur yang baru ini ada lebih banyak hari yang lembut, kabar baik yang datang tanpa diduga, dan alasan kecil buat kamu tersenyum lebih lama.",
+  "Akhirnya kamu sampai juga di surat kecil ini. Makasih ya cayaangg udah mau meluangkan waktu buat baca semuanya. Bacanya pelan-pelan aja, nggak usah buru-buru. Hari ini aku cuma pengin kamu ngerasa kalau ada seseorang yang benar-benar bahagia karena hari ini kamu lahir ke dunia.",
+
+  "Selamat ulang tahun ya, Cayaang. 🤍 Makasih karena udah jadi diri kamu sendiri yang selalu terlihat lucu, random, bawel, manja dan selalu berhasil jadi alasan kenapa hari-hari aku terasa lebih berwarna.",
+
+  "Ada banyak hal dari kamu yang mungkin menurut kamu biasa aja tapi buat aku semuanya berarti sayaang. Cara kamu cerita tentang hari kamu, cara kamu selalu dengerin keluh kesah aku, ngambek karena hal receh, bahkan obrolan-obrolan random kita yang mungkin besok udah lupa pun semuanya selalu jadi bagian favorit aku tauu.",
+
+  "Di hari ulang tahun kamu ini, aku nggak cuma pengin ngucapin selamat atau mendoakan hal-hal yang baik doang tapi aku juga pengin kamu tahu kalau kehadiran kamu itu berarti banget buat aku. Terima kasih karena tanpa sadar, kamu udah membawa banyak bahagia ke hidup aku yaa sayaang.",
+
+  "Sekarang kamu resmi masuk umur 23. Aku tahu banget gimana perjalanan kamu untuk bisa sampai di titik ini cayaang. Ada hari-hari yang bikin capek, ada hal-hal yang mungkin gak pengen kamu alamin tapi di balik itu kamu tetap bertahan dan tetap berusaha. Aku bangga banget sama kamu lebih dari yang mungkin sering aku ucapkan.",
+
+  "Semoga di umur yang baru ini, semesta memperlakukan kamu dengan lebih lembut lagi sayaang. Semoga langkah kamu dimudahkan, hati kamu lebih sering tenang dan kebahagiaan datang dari hal-hal sederhana dan kalau suatu hari dunia terasa berat, kamu harus selalu ingat kalau kamu nggak pernah sendirian cayaang karena ada aku yang akan selalu hadir buat kamu 🤍",
 ];
 
 const HIGHLIGHTS = [
   {
     icon: "♡",
-    title: "Yang aku suka",
-    text: "Kamu selalu punya cara kecil buat bikin hari aku lebih ringan.",
+    title: "Tentang kamu",
+    text: "Kalau ditanya kenapa aku sayang sama kamu, mungkin jawabannya terlalu banyak sihh. Tapi yang paling bermakna karena setiap hari kamu selalu berhasil bikin hidup aku terasa lebih indah.",
   },
   {
     icon: "✦",
-    title: "Doa aku",
-    text: "Semoga tahun ini lebih lembut, lebih banyak kabar baik, dan lebih banyak alasan buat senyum.",
+    title: "Doa yang selalu aku titipkan",
+    text: "Semoga Allah selalu menjaga kamu, menguatkan kamu di setiap langkah dan menghadirkan lebih banyak kebahagiaan daripada kesedihan.",
   },
   {
     icon: "❀",
-    title: "Janji kecil",
-    text: "Aku mau tetap belajar jadi rumah yang aman buat kamu pulang.",
+    title: "Satu janji dari aku",
+    text: "Aku ingin terus tumbuh bareng kamu dalam hal apapun. Menemani setiap cerita, merayakan setiap pencapaian dan memeluk kamu di setiap hari yang terasa berat.",
   },
 ];
 
@@ -52,8 +57,8 @@ export default function LetterPage() {
               <p className="letter-kicker">Untuk wanita yang paling aku sayang</p>
               <h1 id="letter-title">Selamat ulang tahun, Cayaang</h1>
               <p className="letter-intro">
-                Ini bukan surat yang sempurna. Tapi semua yang ada di sini aku
-                tulis dari hati, khusus buat kamu.
+                Ini mungkin bukan surat yang sempurna tapi semua yang ada di sini aku
+                tulis dari hati yang paling dalam khusus buat kamu.
               </p>
             </div>
 
